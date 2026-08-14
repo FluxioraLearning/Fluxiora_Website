@@ -1,0 +1,184 @@
+/* ============================================================
+   FLUXIORA LEARNING — GLOBAL DESIGN SYSTEM
+   Primary font: Inter
+   Color palette: White, Deep Blue, Bright Blue, Cyan/Teal
+   ============================================================ */
+
+/* ── Reset & Base ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Colors */
+  --color-white:        #ffffff;
+  --color-off-white:    #f8faff;
+  --color-light-bg:     #eef4ff;
+  --color-border:       #dce8f8;
+
+  --color-deep-blue:    #0d2c6e;
+  --color-blue:         #1a5cdc;
+  --color-blue-hover:   #1549b8;
+  --color-blue-light:   #e8f0fe;
+  --color-blue-mid:     #4a7ef5;
+
+  --color-cyan:         #00b4c8;
+  --color-cyan-light:   #e0f7fa;
+  --color-teal:         #0e9aad;
+
+  --color-text-primary:   #0d2c6e;
+  --color-text-secondary: #4a5568;
+  --color-text-muted:     #718096;
+
+  --color-dark-footer:  #0a1f50;
+
+  /* Typography */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --fs-xs:   0.75rem;
+  --fs-sm:   0.875rem;
+  --fs-base: 1rem;
+  --fs-md:   1.125rem;
+  --fs-lg:   1.25rem;
+  --fs-xl:   1.5rem;
+  --fs-2xl:  1.875rem;
+  --fs-3xl:  2.25rem;
+  --fs-4xl:  3rem;
+  --fs-5xl:  3.75rem;
+
+  --fw-light:    300;
+  --fw-regular:  400;
+  --fw-medium:   500;
+  --fw-semibold: 600;
+  --fw-bold:     700;
+  --fw-extrabold:800;
+  --fw-black:    900;
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* Border Radius */
+  --radius-sm:  4px;
+  --radius-md:  8px;
+  --radius-lg:  12px;
+  --radius-xl:  16px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm:  0 1px 3px rgba(26, 92, 220, 0.08);
+  --shadow-md:  0 4px 16px rgba(26, 92, 220, 0.10);
+  --shadow-lg:  0 8px 32px rgba(26, 92, 220, 0.14);
+  --shadow-xl:  0 16px 48px rgba(26, 92, 220, 0.18);
+
+  /* Transitions */
+  --transition-fast:   150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow:   400ms ease;
+
+  /* Layout */
+  --max-width: 1280px;
+  --header-height: 72px;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--color-text-primary);
+  background-color: var(--color-white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color var(--transition-normal);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: var(--font-family);
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* ── Utility Classes ── */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.section-padding {
+  padding: var(--space-20) 0;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* ── Main Content Layer (Unified Overlapping Sheet) ── */
+.main-content-layer {
+  position: relative;
+  z-index: 10;
+  background: var(--color-white);
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  border-top: 1.5px solid rgba(220, 232, 248, 0.9);
+  box-shadow: 0 -20px 50px rgba(13, 44, 110, 0.09);
+  overflow: hidden;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0 var(--space-4);
+  }
+
+  .section-padding {
+    padding: var(--space-12) 0;
+  }
+
+  .main-content-layer {
+    border-top-left-radius: 28px;
+    border-top-right-radius: 28px;
+  }
+}

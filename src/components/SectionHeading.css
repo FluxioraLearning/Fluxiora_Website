@@ -1,0 +1,109 @@
+/* ── Section Heading ── */
+.section-heading {
+  margin-bottom: var(--space-12);
+}
+
+.section-heading--centered {
+  text-align: center;
+}
+
+.section-heading__title-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.section-heading__line {
+  position: relative;
+  flex: 1;
+  max-width: 60px;
+  height: 2px;
+  background: var(--color-blue);
+  border-radius: var(--radius-full);
+}
+
+.section-heading__line:first-child::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-blue);
+}
+
+.section-heading__line:last-child::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-blue);
+}
+
+.section-heading__title {
+  font-size: clamp(1.4rem, 3.5vw, var(--fs-3xl));
+  font-weight: 800;
+  color: #0b2356;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  letter-spacing: -0.01em;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.section-heading__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 3px var(--space-3);
+  background: #ef4444;
+  color: white;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  border-radius: var(--radius-full);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  animation: pulseBadge 2s ease-in-out infinite;
+}
+
+@keyframes pulseBadge {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.section-heading__subtitle {
+  margin-top: var(--space-3);
+  font-size: clamp(0.88rem, 2.5vw, 1rem);
+  color: #5c6f84;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  padding: 0 var(--space-4);
+}
+
+/* ── Mobile adjustments ── */
+@media (max-width: 600px) {
+  .section-heading {
+    margin-bottom: var(--space-8);
+  }
+
+  .section-heading__line {
+    display: none;
+  }
+
+  .section-heading__title {
+    font-size: 1.45rem;
+    line-height: 1.3;
+  }
+}

@@ -1,0 +1,244 @@
+/* ── Our Vision Section (9-Step Timeline) ── */
+.our-vision {
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+  padding: var(--space-20) 0 var(--space-24);
+}
+
+/* Background dots matrix */
+.our-vision__dots {
+  position: absolute;
+  bottom: 20px;
+  width: 140px;
+  height: 180px;
+  background-image: radial-gradient(var(--color-cyan) 1.5px, transparent 1.5px);
+  background-size: 14px 14px;
+  opacity: 0.25;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.our-vision__dots--left {
+  left: 12px;
+}
+
+.our-vision__dots--right {
+  right: 12px;
+}
+
+/* Heading with Italic Subtitle */
+.our-vision__heading-wrap .section-heading__subtitle {
+  font-style: italic;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #4a6382;
+  margin-top: var(--space-2);
+}
+
+/* ── Timeline Scroll Container ── */
+.our-vision__timeline-scroll {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 30px 10px 40px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(26, 92, 220, 0.2) transparent;
+}
+
+.our-vision__timeline-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.our-vision__timeline-scroll::-webkit-scrollbar-thumb {
+  background: rgba(26, 92, 220, 0.2);
+  border-radius: var(--radius-full);
+}
+
+/* ── 9-Step Timeline Grid / Row ── */
+.our-vision__timeline {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  min-width: 1140px;
+  position: relative;
+  padding-top: 10px;
+}
+
+/* Horizontal connecting rainbow gradient bar */
+.our-vision__connector-bar {
+  position: absolute;
+  top: 50px;
+  left: 45px;
+  right: 45px;
+  height: 6px;
+  background: linear-gradient(
+    90deg,
+    #2563eb 0%,
+    #0284c7 12.5%,
+    #06b6d4 25%,
+    #10b981 37.5%,
+    #22c55e 50%,
+    #84cc16 62.5%,
+    #eab308 75%,
+    #f59e0b 87.5%,
+    #ea580c 100%
+  );
+  border-radius: var(--radius-full);
+  z-index: 1;
+}
+
+/* ── Individual Vision Step ── */
+.vision-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  max-width: 135px;
+  padding: 0 4px;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  transition: transform 0.38s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Hover Growth Interaction (Grow Image & Content together) */
+.vision-step:hover {
+  transform: translateY(-10px) scale(1.12);
+  z-index: 10;
+}
+
+/* ── Step Circle Node ── */
+.vision-step__circle-wrap {
+  position: relative;
+  z-index: 3;
+  margin-bottom: 2px;
+}
+
+.vision-step__circle {
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 4.5px solid var(--step-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.35s ease,
+              border-color 0.3s ease;
+}
+
+.vision-step:hover .vision-step__circle {
+  transform: scale(1.14);
+  box-shadow: 0 12px 28px var(--step-glow), 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.vision-step__svg {
+  width: 34px;
+  height: 34px;
+  transition: transform 0.35s ease;
+}
+
+.vision-step:hover .vision-step__svg {
+  transform: scale(1.12);
+}
+
+/* ── Dotted Vertical Dropdown Line ── */
+.vision-step__dotted-line {
+  width: 2px;
+  height: 24px;
+  border-left: 2px dotted var(--step-color);
+  margin: 4px 0 6px;
+  opacity: 0.85;
+  transition: height 0.3s ease, opacity 0.3s ease;
+}
+
+.vision-step:hover .vision-step__dotted-line {
+  height: 28px;
+  opacity: 1;
+}
+
+/* ── Step Number Badge ── */
+.vision-step__badge {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--step-color);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.02em;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px var(--step-glow);
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.3s ease;
+}
+
+.vision-step:hover .vision-step__badge {
+  transform: scale(1.25);
+  box-shadow: 0 4px 12px var(--step-glow);
+}
+
+/* ── Step Content (Title & Description) ── */
+.vision-step__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.3s ease;
+}
+
+.vision-step:hover .vision-step__content {
+  transform: translateY(-2px);
+}
+
+.vision-step__title {
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: #0b2356;
+  line-height: 1.3;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.vision-step:hover .vision-step__title {
+  color: var(--step-color);
+}
+
+.vision-step__desc {
+  font-size: 0.78rem;
+  color: #55677d;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 125px;
+  transition: color 0.3s ease;
+}
+
+.vision-step:hover .vision-step__desc {
+  color: #2e3e52;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1200px) {
+  .our-vision__timeline-scroll {
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .our-vision {
+    padding: var(--space-12) 0;
+  }
+
+  .our-vision__dots {
+    display: none;
+  }
+}

@@ -1,0 +1,161 @@
+/* ── About Us Section ── */
+.about-us {
+  background: var(--color-white);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── Composition Container ── */
+.about-us__composition {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-8) var(--space-4);
+  position: relative;
+}
+
+/* ── Background Soft-Blue Card Layer ── */
+.about-us__bg-card {
+  position: relative;
+  background: #edf5fe;
+  border-radius: 36px;
+  width: 100%;
+  max-width: 1080px;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 48px 56px 48px 460px; /* offset for overlapping left card */
+  box-shadow: 0 12px 36px rgba(26, 92, 220, 0.05);
+  transition: box-shadow 0.35s ease;
+}
+
+.about-us__bg-card:hover {
+  box-shadow: 0 20px 48px rgba(26, 92, 220, 0.10);
+}
+
+/* ── Foreground White Logo Card (Overlapping Left Side) ── */
+.about-us__logo-card {
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 440px;
+  min-height: 380px;
+  background: #ffffff;
+  border: 2.5px solid #2563eb;
+  border-radius: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 36px;
+  box-shadow: 0 20px 50px rgba(37, 99, 235, 0.14),
+              0 6px 18px rgba(0, 0, 0, 0.04);
+  z-index: 2;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.35s ease,
+              border-color 0.35s ease;
+}
+
+.about-us__logo-card:hover {
+  transform: translateY(-54%) scale(1.02);
+  box-shadow: 0 26px 60px rgba(37, 99, 235, 0.20);
+  border-color: #1d4ed8;
+}
+
+.about-us__logo-img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ── Right Text Content ── */
+.about-us__text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 530px;
+  z-index: 1;
+}
+
+.about-us__paragraph {
+  font-size: 1.22rem;
+  font-weight: 500;
+  color: #0b2356;
+  line-height: 1.85;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+/* ── Decorative Line & Dot ── */
+.about-us__dec-line-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.about-us__dec-line {
+  width: 72px;
+  height: 4.5px;
+  background: linear-gradient(90deg, #2563eb 0%, #00d2ff 100%);
+  border-radius: var(--radius-full);
+}
+
+.about-us__dec-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #00d2ff;
+}
+
+/* ── Responsive Styling ── */
+@media (max-width: 1024px) {
+  .about-us__bg-card {
+    padding: 40px 40px 40px 380px;
+  }
+
+  .about-us__logo-card {
+    width: 360px;
+    min-height: 320px;
+    left: -10px;
+  }
+
+  .about-us__paragraph {
+    font-size: 1.08rem;
+    line-height: 1.75;
+  }
+}
+
+@media (max-width: 860px) {
+  .about-us__bg-card {
+    flex-direction: column;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+    align-items: center;
+    gap: var(--space-6);
+  }
+
+  .about-us__logo-card {
+    position: static;
+    transform: none !important;
+    width: 100%;
+    max-width: 380px;
+    min-height: auto;
+    padding: 32px 24px;
+  }
+
+  .about-us__text-content {
+    background: #edf5fe;
+    border-radius: 28px;
+    padding: 32px 24px;
+    max-width: 100%;
+    box-shadow: 0 12px 32px rgba(26, 92, 220, 0.05);
+  }
+
+  .about-us__paragraph {
+    font-size: 1.02rem;
+    line-height: 1.7;
+  }
+}

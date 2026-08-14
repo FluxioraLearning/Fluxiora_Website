@@ -1,0 +1,168 @@
+/* ── Contact Us Section ── */
+.contact-us {
+  background: var(--color-off-white);
+  position: relative;
+}
+
+/* ── Single Unified Contact Card ── */
+.contact-card__unified {
+  background: var(--color-white);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+  box-shadow: 0 12px 40px rgba(26, 92, 220, 0.06);
+  max-width: 1040px;
+  margin: 0 auto;
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.contact-card__unified:hover {
+  box-shadow: 0 20px 52px rgba(26, 92, 220, 0.12);
+  border-color: rgba(26, 92, 220, 0.3);
+}
+
+/* ── Top Section: Founders Row ── */
+.contact-unified__founders-row {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  padding: var(--space-8) var(--space-8);
+  gap: var(--space-8);
+}
+
+/* Each Person Column */
+.contact-unified__person {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  min-width: 0;
+}
+
+.contact-unified__name {
+  font-size: 1.32rem;
+  font-weight: 800;
+  color: var(--color-deep-blue);
+  line-height: 1.3;
+}
+
+.contact-unified__role {
+  font-weight: 800;
+}
+
+/* Contact Details */
+.contact-unified__details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.contact-unified__detail-row {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.contact-unified__label {
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  font-size: 0.92rem;
+  min-width: 55px;
+  flex-shrink: 0;
+}
+
+.contact-unified__link {
+  font-weight: 600;
+  color: var(--color-deep-blue);
+  text-decoration: none;
+  word-break: break-all;
+  transition: color var(--transition-normal);
+}
+
+.contact-unified__link:hover {
+  color: var(--color-blue);
+  text-decoration: underline;
+}
+
+.contact-unified__link--accent {
+  color: var(--color-blue);
+}
+
+.contact-unified__link--accent:hover {
+  color: var(--color-teal);
+}
+
+/* ── Vertical Divider Line (Between Founder & Co-Founder) ── */
+.contact-unified__v-divider {
+  width: 1.5px;
+  background: linear-gradient(180deg, transparent, var(--color-border) 15%, var(--color-cyan) 50%, var(--color-border) 85%, transparent);
+  flex-shrink: 0;
+  align-self: stretch;
+}
+
+/* ── Horizontal Divider Line (Between Founders & Organization) ── */
+.contact-unified__h-divider {
+  width: 100%;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, var(--color-border) 15%, var(--color-cyan) 50%, var(--color-border) 85%, transparent);
+}
+
+/* ── Bottom Section: Organization Details ── */
+.contact-unified__org-row {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: var(--space-6);
+  padding: var(--space-6) var(--space-8);
+  background: #fbfdff;
+}
+
+.contact-unified__org-col {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.contact-unified__org-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.contact-unified__org-val {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-deep-blue);
+}
+
+/* ── Responsive ── */
+@media (max-width: 860px) {
+  .contact-unified__founders-row {
+    flex-direction: column;
+    gap: var(--space-6);
+    padding: var(--space-6);
+  }
+
+  .contact-unified__v-divider {
+    width: 100%;
+    height: 1.5px;
+    background: linear-gradient(90deg, transparent, var(--color-cyan) 50%, transparent);
+  }
+
+  .contact-unified__org-row {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+    padding: var(--space-5) var(--space-6);
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-unified__detail-row {
+    flex-direction: column;
+    gap: 2px;
+  }
+}

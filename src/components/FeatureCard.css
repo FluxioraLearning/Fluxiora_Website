@@ -1,0 +1,262 @@
+/* ── What We Provide Section ── */
+.what-we-provide {
+  background: linear-gradient(180deg, #f8faff 0%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+  padding: var(--space-20) 0 calc(var(--space-20) + 24px);
+}
+
+/* Background dots matrix */
+.what-we-provide__dots {
+  position: absolute;
+  top: 15%;
+  width: 140px;
+  height: 280px;
+  background-image: radial-gradient(var(--color-cyan) 1.5px, transparent 1.5px);
+  background-size: 14px 14px;
+  opacity: 0.28;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.what-we-provide__dots--left {
+  left: 12px;
+}
+
+.what-we-provide__dots--right {
+  right: 12px;
+}
+
+/* Container & Grid Wrap */
+.feature-cards__grid-wrap {
+  position: relative;
+  z-index: 1;
+  padding-top: 36px;
+  padding-bottom: 28px;
+}
+
+/* ── Feature Cards Grid ── */
+.feature-cards__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-5);
+  align-items: start;
+}
+
+/* ── 360 Orbital Wave Float Animation (Clockwise) ── */
+@keyframes orbitFloatingCW {
+  0% {
+    transform: translate(0px, var(--base-y, 0px)) rotate(0deg);
+  }
+  25% {
+    transform: translate(10px, calc(var(--base-y, 0px) - 16px)) rotate(1.5deg);
+  }
+  50% {
+    transform: translate(0px, calc(var(--base-y, 0px) - 24px)) rotate(0deg);
+  }
+  75% {
+    transform: translate(-10px, calc(var(--base-y, 0px) - 10px)) rotate(-1.5deg);
+  }
+  100% {
+    transform: translate(0px, var(--base-y, 0px)) rotate(0deg);
+  }
+}
+
+/* ── 360 Orbital Wave Float Animation (Counter-Clockwise) ── */
+@keyframes orbitFloatingCCW {
+  0% {
+    transform: translate(0px, var(--base-y, 0px)) rotate(0deg);
+  }
+  25% {
+    transform: translate(-10px, calc(var(--base-y, 0px) - 14px)) rotate(-1.5deg);
+  }
+  50% {
+    transform: translate(0px, calc(var(--base-y, 0px) - 24px)) rotate(0deg);
+  }
+  75% {
+    transform: translate(10px, calc(var(--base-y, 0px) - 12px)) rotate(1.5deg);
+  }
+  100% {
+    transform: translate(0px, var(--base-y, 0px)) rotate(0deg);
+  }
+}
+
+/* ── Individual Feature Card ── */
+.feature-card {
+  position: relative;
+  background: var(--color-white);
+  border: 1px solid rgba(220, 232, 248, 0.9);
+  border-radius: 12px; /* reduced border radius as requested */
+  padding: 34px 18px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(26, 92, 220, 0.06);
+  cursor: default;
+  min-height: 350px;
+  transform: translateY(var(--base-y, 0px));
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.3s ease,
+              border-color 0.3s ease;
+  overflow: hidden;
+  will-change: transform;
+}
+
+/* Orbital animation attachments */
+.feature-card--orbit-cw {
+  animation: orbitFloatingCW 5.8s ease-in-out infinite var(--anim-delay, 0s);
+}
+
+.feature-card--orbit-ccw {
+  animation: orbitFloatingCCW 6.2s ease-in-out infinite var(--anim-delay, 0s);
+}
+
+/* Active card hover effect - pauses animation ONLY when hovering directly over that card */
+.feature-card:hover {
+  animation-play-state: paused !important;
+  transform: translate(0px, calc(var(--base-y, 0px) - 8px)) scale(1.03) !important;
+  box-shadow: 0 20px 40px rgba(26, 92, 220, 0.16);
+  border-color: rgba(26, 92, 220, 0.35);
+}
+
+/* ── Bottom Blue Line (Appears ONLY on hover) ── */
+.feature-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #00b4c8 0%, #1a6ef5 50%, #00b4c8 100%);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.35s ease,
+              box-shadow 0.35s ease;
+  box-shadow: 0 -2px 10px rgba(26, 110, 245, 0.6);
+}
+
+.feature-card:hover::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+/* ── Real Uploaded Image Icon Wrapper ── */
+.feature-card__icon-halo {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #edf5ff 0%, #e1effe 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 16px rgba(26, 92, 220, 0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+}
+
+.feature-card:hover .feature-card__icon-halo {
+  transform: scale(1.08) rotate(4deg);
+  box-shadow: 0 8px 24px rgba(26, 92, 220, 0.16);
+  background: radial-gradient(circle, #ffffff 0%, #dbeafe 100%);
+}
+
+.feature-card__icon-wrapper {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-card__img-icon {
+  width: 62px;
+  height: 62px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(13, 44, 110, 0.12));
+  transition: transform 0.35s ease;
+}
+
+.feature-card:hover .feature-card__img-icon {
+  transform: scale(1.08);
+}
+
+/* ── Title, Divider Line & Description ── */
+.feature-card__title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #0b2356;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 1.35;
+  margin-bottom: 12px;
+}
+
+.feature-card__title-line {
+  width: 32px;
+  height: 3px;
+  background: #0099ff;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  transition: width 0.3s ease, background 0.3s ease;
+}
+
+.feature-card:hover .feature-card__title-line {
+  width: 44px;
+  background: var(--color-blue);
+}
+
+.feature-card__description {
+  font-size: 0.875rem;
+  color: #506176;
+  line-height: 1.65;
+  flex: 1;
+  max-width: 205px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1100px) {
+  .feature-cards__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+  }
+  
+  .feature-card {
+    --base-y: 0px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .what-we-provide {
+    padding: var(--space-12) 0;
+  }
+
+  .what-we-provide__dots {
+    display: none;
+  }
+
+  .feature-cards__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+  }
+
+  .feature-card {
+    min-height: 310px;
+    padding: 26px 16px 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .feature-cards__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card {
+    min-height: auto;
+  }
+}
