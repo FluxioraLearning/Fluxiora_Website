@@ -28,6 +28,7 @@ export default function Header() {
       const sections = [
         { id: 'contact', label: 'Contact' },
         { id: 'about', label: 'About Us' },
+        { id: 'internships', label: 'Internships' },
         { id: 'upcoming', label: 'Courses' },
         { id: 'workshops', label: 'Workshops' },
       ];

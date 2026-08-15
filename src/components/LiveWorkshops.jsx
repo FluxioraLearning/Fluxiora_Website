@@ -103,8 +103,15 @@ export default function LiveWorkshops() {
                 </div>
                 <div className="live-workshop__meta-text">
                   <span className="live-workshop__meta-label">Registration Fee</span>
-                  <span className="live-workshop__meta-value live-workshop__meta-value--price">
-                    ₹399 <span className="live-workshop__per-participant">/ Per Participant</span>
+                  <div className="live-workshop__price-row">
+                    <span className="live-workshop__price-cut">₹399</span>
+                    <span className="live-workshop__meta-value live-workshop__meta-value--price">
+                      ₹299
+                    </span>
+                    <span className="live-workshop__per-participant">/ Per Participant</span>
+                  </div>
+                  <span className="live-workshop__early-tag">
+                    ⚡ For early 50 participants only
                   </span>
                 </div>
               </div>
@@ -146,11 +153,16 @@ export default function LiveWorkshops() {
             {/* Action Buttons & Notice */}
             <div className="live-workshop__action-row">
               <a
-                href="#contact"
+                href="https://forms.gle/Dm2R2MM3K5JqvAQV7"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="live-workshop__register-btn"
-                aria-label="Register for New Horizons of Drug Discovery Workshop"
+                aria-label="Register for New Horizons of Drug Discovery Workshop on Google Forms"
               >
-                Register Now — ₹399 <span className="live-workshop__btn-arrow">→</span>
+                <span>
+                  Register Now — <span className="live-workshop__btn-cut">₹399</span> ₹299
+                </span>
+                <span className="live-workshop__btn-arrow">→</span>
               </a>
               <a
                 href={pdfUrl}
@@ -162,9 +174,14 @@ export default function LiveWorkshops() {
                 <span aria-hidden="true">📥</span> View Brochure (PDF)
               </a>
             </div>
-            <span className="live-workshop__seats-notice">
-              🔥 Limited seats available for live interactions!
-            </span>
+            <div className="live-workshop__offers-notice">
+              <span className="live-workshop__early-badge-pill">
+                🏷️ Special Offer: ₹299 for early 50 participants only (Regular ₹399)
+              </span>
+              <span className="live-workshop__seats-notice">
+                🔥 Limited seats available for live interactions!
+              </span>
+            </div>
           </div>
         </div>
       </div>

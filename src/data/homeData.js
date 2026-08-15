@@ -282,6 +282,7 @@ export const navLinks = [
   { label: "Home", href: "#home" },
   { label: "Workshops", href: "#workshops" },
   { label: "Courses", href: "#upcoming" },
+  { label: "Internships", href: "#internships" },
   { label: "About Us", href: "#about" },
   { label: "Contact", href: "#contact" },
 ];
@@ -296,6 +297,7 @@ export const quickLinks = [
 export const resourceLinks = [
   { label: "Workshops", href: "#workshops" },
   { label: "Courses", href: "#upcoming" },
+  { label: "Internships", href: "#internships" },
 ];
 
 export const socialLinks = [

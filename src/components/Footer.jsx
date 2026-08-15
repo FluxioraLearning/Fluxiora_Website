@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import logoHorizontal from '../assets/images/logo-horizontal.png';
 import { quickLinks, resourceLinks, socialLinks } from '../data/homeData';
 import './Footer.css';
@@ -23,18 +22,6 @@ const SocialIcon = ({ type }) => {
 };
 
 export default function Footer() {
-  const [email, setEmail] = useState('');
-  const [subscribed, setSubscribed] = useState(false);
-
-  const handleSubscribe = (e) => {
-    e.preventDefault();
-    if (email.trim()) {
-      setSubscribed(true);
-      setEmail('');
-      setTimeout(() => setSubscribed(false), 4000);
-    }
-  };
-
   return (
     <footer className="footer-v2" aria-label="Site Footer">
       {/* Decorative Matrix Dots */}
@@ -122,7 +109,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 4: Follow Us & Stay Updated */}
+          {/* Column 4: Follow Us & Send Enquiry */}
           <div className="footer-v2__col footer-v2__col--right">
             <h4 className="footer-v2__heading">Follow Us</h4>
             <div className="footer-v2__heading-line" aria-hidden="true" />
@@ -144,50 +131,32 @@ export default function Footer() {
               ))}
             </div>
 
-            {/* Stay Updated Newsletter Card */}
-            <div className="footer-v2__newsletter-card">
-              <div className="footer-v2__newsletter-header">
-                <div className="footer-v2__newsletter-icon-wrap" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" width="16" height="16">
-                    <line x1="22" y1="2" x2="11" y2="13" />
-                    <polygon points="22 2 15 22 11 13 2 9 22 2" fill="currentColor" />
-                  </svg>
-                </div>
-                <div className="footer-v2__newsletter-text">
-                  <h5 className="footer-v2__newsletter-title">Stay Updated</h5>
-                  <p className="footer-v2__newsletter-subtitle">
-                    Subscribe to get the latest updates on workshops, courses and more.
-                  </p>
-                </div>
-              </div>
-
-              <form className="footer-v2__newsletter-form" onSubmit={handleSubscribe}>
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="footer-v2__newsletter-input"
-                  required
-                  aria-label="Email for newsletter subscription"
-                />
-                <button
-                  type="submit"
-                  className="footer-v2__newsletter-submit"
-                  aria-label="Subscribe to newsletter"
+            {/* Send Enquiry Button */}
+            <div className="footer-v2__enquiry-wrap">
+              <a
+                href="https://forms.gle/ZgfMLiPx4EyEuCeB6"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer-v2__enquiry-btn"
+                aria-label="Send Enquiry on Google Forms"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  width="18"
+                  height="18"
+                  aria-hidden="true"
                 >
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" width="16" height="16">
-                    <line x1="22" y1="2" x2="11" y2="13" />
-                    <polygon points="22 2 15 22 11 13 2 9 22 2" fill="currentColor" />
-                  </svg>
-                </button>
-              </form>
-
-              {subscribed && (
-                <p className="footer-v2__subscribed-msg">
-                  ✓ Thank you for subscribing!
-                </p>
-              )}
+                  <line x1="22" y1="2" x2="11" y2="13" />
+                  <polygon points="22 2 15 22 11 13 2 9 22 2" fill="currentColor" />
+                </svg>
+                <span>Send Enquiry</span>
+                <span className="footer-v2__enquiry-arrow">→</span>
+              </a>
             </div>
           </div>
         </div>

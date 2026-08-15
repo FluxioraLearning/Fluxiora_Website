@@ -67,11 +67,13 @@ export default function UpcomingWorkshops() {
 
         <div className="upcoming-workshops__action">
           <a
-            href="#contact"
+            href="https://forms.gle/2oJtC1fQPvDsAXrPA"
+            target="_blank"
+            rel="noopener noreferrer"
             className="upcoming-workshops__view-btn"
-            aria-label="Pre-Register for upcoming workshops"
+            aria-label="Pre-Register for upcoming workshops on Google Forms"
           >
-            Pre-Register / Inquire Now →
+            Pre-Register Now →
           </a>
         </div>
       </div>
