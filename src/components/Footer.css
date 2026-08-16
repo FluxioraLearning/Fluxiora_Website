@@ -216,6 +216,9 @@
   box-shadow: 0 4px 16px rgba(13, 148, 136, 0.32);
   transition: all var(--transition-normal);
   text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 }
 
 .footer-v2__enquiry-btn:hover {

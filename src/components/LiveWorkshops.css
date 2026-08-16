@@ -333,6 +333,9 @@
   box-shadow: 0 4px 20px rgba(26, 92, 220, 0.35);
   transition: all var(--transition-normal);
   white-space: nowrap;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 }
 
 .live-workshop__register-btn:hover {

@@ -172,6 +172,9 @@
   transition: all var(--transition-normal);
   white-space: nowrap;
   text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 }
 
 .internships__cta-btn:hover {

@@ -1,8 +1,11 @@
+import { useState } from 'react';
 import workshopPoster from '../assets/images/workshop_poster.jpeg';
 import SectionHeading from './SectionHeading';
+import WorkshopRegistrationModal from './WorkshopRegistrationModal';
 import './LiveWorkshops.css';
 
 export default function LiveWorkshops() {
+  const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false);
   const pdfUrl = '/workshop_molecular_docking.pdf';
 
   return (
@@ -152,18 +155,17 @@ export default function LiveWorkshops() {
 
             {/* Action Buttons & Notice */}
             <div className="live-workshop__action-row">
-              <a
-                href="https://forms.gle/Dm2R2MM3K5JqvAQV7"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                type="button"
                 className="live-workshop__register-btn"
-                aria-label="Register for New Horizons of Drug Discovery Workshop on Google Forms"
+                onClick={() => setIsRegisterModalOpen(true)}
+                aria-label="Open Registration Form for Molecular Docking Workshop"
               >
                 <span>
                   Register Now — <span className="live-workshop__btn-cut">₹399</span> ₹299
                 </span>
                 <span className="live-workshop__btn-arrow">→</span>
-              </a>
+              </button>
               <a
                 href={pdfUrl}
                 target="_blank"
@@ -185,6 +187,13 @@ export default function LiveWorkshops() {
           </div>
         </div>
       </div>
+
+      {/* Google Form-Styled Live Workshop Registration Modal */}
+      <WorkshopRegistrationModal
+        isOpen={isRegisterModalOpen}
+        onClose={() => setIsRegisterModalOpen(false)}
+      />
     </section>
   );
 }
+

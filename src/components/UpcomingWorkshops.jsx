@@ -1,8 +1,12 @@
+import { useState } from 'react';
 import { upcomingWorkshops } from '../data/homeData';
 import SectionHeading from './SectionHeading';
+import PreRegisterModal from './PreRegisterModal';
 import './UpcomingWorkshops.css';
 
 export default function UpcomingWorkshops() {
+  const [isPreRegisterOpen, setIsPreRegisterOpen] = useState(false);
+
   return (
     <section className="upcoming-workshops section-padding" id="upcoming" aria-label="Upcoming Workshops">
       <div className="container">
@@ -66,17 +70,23 @@ export default function UpcomingWorkshops() {
         </div>
 
         <div className="upcoming-workshops__action">
-          <a
-            href="https://forms.gle/2oJtC1fQPvDsAXrPA"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            type="button"
             className="upcoming-workshops__view-btn"
-            aria-label="Pre-Register for upcoming workshops on Google Forms"
+            onClick={() => setIsPreRegisterOpen(true)}
+            aria-label="Open Pre-Registration Form for upcoming workshops"
           >
             Pre-Register Now →
-          </a>
+          </button>
         </div>
       </div>
+
+      {/* Google Form-Styled Pre-Registration Modal */}
+      <PreRegisterModal
+        isOpen={isPreRegisterOpen}
+        onClose={() => setIsPreRegisterOpen(false)}
+      />
     </section>
   );
 }
+
