@@ -196,4 +196,10 @@ export const socialLinks = [
     href: "https://www.linkedin.com/company/fluxiora-intelligence-private-limited/",
     icon: "in",
   },
+  {
+    label: "WhatsApp Channel",
+    href: "https://whatsapp.com/channel/0029VbDSFS55EjxwikbfHe2d",
+    icon: "wa",
+  },
 ];
+
