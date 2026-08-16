@@ -137,54 +137,6 @@ export const ourVisionSteps = [
   },
 ];
 
-// ── Live Workshops ───────────────────────────────────────────
-export const liveWorkshops = [
-  {
-    id: 1,
-    title: "Web Development with React & Node.js",
-    date: "Today, 7:00 PM",
-    attendees: 42,
-    isLive: true,
-    buttonLabel: "Join Live",
-    buttonVariant: "primary",
-    color: "#1a5cdc",
-    emoji: "⚛️",
-  },
-  {
-    id: 2,
-    title: "Introduction to Artificial Intelligence",
-    date: "Tomorrow, 6:00 PM",
-    attendees: 37,
-    isLive: false,
-    buttonLabel: "Register",
-    buttonVariant: "outline",
-    color: "#7c3aed",
-    emoji: "🧠",
-  },
-  {
-    id: 3,
-    title: "Cyber Security Essentials",
-    date: "Sat, 24 Aug",
-    attendees: 56,
-    isLive: false,
-    buttonLabel: "Register",
-    buttonVariant: "outline",
-    color: "#0e9aad",
-    emoji: "🔐",
-  },
-  {
-    id: 4,
-    title: "React Native Crash Course",
-    date: "Sun, 25 Aug",
-    attendees: 48,
-    isLive: false,
-    buttonLabel: "Register",
-    buttonVariant: "outline",
-    color: "#059669",
-    emoji: "📱",
-  },
-];
-
 // ── Upcoming Workshops ───────────────────────────────────────
 export const upcomingWorkshops = [
   {
@@ -207,73 +159,6 @@ export const upcomingWorkshops = [
     icon: pythonLogo,
     color: "#306998",
     tag: "Data Science & Analytics",
-  },
-];
-
-// ── Statistics ───────────────────────────────────────────────
-export const stats = [
-  {
-    id: 1,
-    value: "500+",
-    label: "Students Trained",
-    icon: "👥",
-  },
-  {
-    id: 2,
-    value: "20+",
-    label: "Live Workshops",
-    icon: "🎥",
-  },
-  {
-    id: 3,
-    value: "10+",
-    label: "Tech Domains",
-    icon: "📐",
-  },
-  {
-    id: 4,
-    value: "100%",
-    label: "Practical Learning",
-    icon: "🏆",
-  },
-];
-
-// ── Why Choose Us ────────────────────────────────────────────
-export const whyChoosePoints = [
-  "Practical & Industry-Relevant Learning",
-  "Expert Mentors from Industry",
-  "Live Interaction & Doubt Solving",
-  "Certificates & Career Support",
-];
-
-// ── Testimonials ─────────────────────────────────────────────
-export const testimonials = [
-  {
-    id: 1,
-    quote:
-      "The workshops are practical, engaging and really helped me improve my coding skills.",
-    name: "Ayush Sharma",
-    role: "Full Stack Developer",
-    initials: "AS",
-    color: "#1a5cdc",
-  },
-  {
-    id: 2,
-    quote:
-      "Amazing community and mentors! I got the right guidance for my career.",
-    name: "Sneha Patil",
-    role: "ML Enthusiast",
-    initials: "SP",
-    color: "#7c3aed",
-  },
-  {
-    id: 3,
-    quote:
-      "Fluxiora Learning provides real-world exposure and builds confidence.",
-    name: "Rohit Verma",
-    role: "Cyber Security Analyst",
-    initials: "RV",
-    color: "#0e9aad",
   },
 ];
 

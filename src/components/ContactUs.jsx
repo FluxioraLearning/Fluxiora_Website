@@ -36,7 +36,7 @@ export default function ContactUs() {
                 <div className="contact-unified__detail-row">
                   <span className="contact-unified__label">Phone:</span>
                   <a
-                    href="tel:7565952518"
+                    href="tel:+917565952518"
                     className="contact-unified__link"
                     aria-label="Call Ambar Pandey at 7565952518"
                   >
@@ -71,7 +71,7 @@ export default function ContactUs() {
                 <div className="contact-unified__detail-row">
                   <span className="contact-unified__label">Phone:</span>
                   <a
-                    href="tel:9335207070"
+                    href="tel:+919335207070"
                     className="contact-unified__link"
                     aria-label="Call Nishchay Tripathi at 9335207070"
                   >
