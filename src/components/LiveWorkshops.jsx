@@ -1,11 +1,11 @@
-import { useState } from 'react';
 import workshopPoster from '../assets/images/workshop_poster.jpeg';
 import SectionHeading from './SectionHeading';
-import WorkshopRegistrationModal from './WorkshopRegistrationModal';
 import './LiveWorkshops.css';
 
+const GOOGLE_FORM_URL =
+  'https://docs.google.com/forms/d/e/1FAIpQLSclD1tzkMBr6e_XE__CMYPLCiTBkrtz5o-rurlMOqURONx5_g/viewform';
+
 export default function LiveWorkshops() {
-  const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false);
   const pdfUrl = '/workshop_molecular_docking.pdf';
 
   return (
@@ -155,17 +155,18 @@ export default function LiveWorkshops() {
 
             {/* Action Buttons & Notice */}
             <div className="live-workshop__action-row">
-              <button
-                type="button"
+              <a
+                href={GOOGLE_FORM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="live-workshop__register-btn"
-                onClick={() => setIsRegisterModalOpen(true)}
-                aria-label="Open Registration Form for Molecular Docking Workshop"
+                aria-label="Open Google Form for Molecular Docking Workshop Registration"
               >
                 <span>
                   Register Now — <span className="live-workshop__btn-cut">₹399</span> ₹299
                 </span>
                 <span className="live-workshop__btn-arrow">→</span>
-              </button>
+              </a>
               <a
                 href={pdfUrl}
                 target="_blank"
@@ -187,13 +188,6 @@ export default function LiveWorkshops() {
           </div>
         </div>
       </div>
-
-      {/* Google Form-Styled Live Workshop Registration Modal */}
-      <WorkshopRegistrationModal
-        isOpen={isRegisterModalOpen}
-        onClose={() => setIsRegisterModalOpen(false)}
-      />
     </section>
   );
 }
-

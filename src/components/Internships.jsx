@@ -1,7 +1,8 @@
-import { useState } from 'react';
 import SectionHeading from './SectionHeading';
-import InternshipFormModal from './InternshipFormModal';
 import './Internships.css';
+
+const INTERNSHIP_FORM_URL =
+  'https://docs.google.com/forms/d/e/1FAIpQLSdPnvpbPZcizM_vGWJxzdxx8CI2kxHGLA6_cKs2Ye0cDZ8M9A/viewform';
 
 const internshipPerks = [
   {
@@ -27,8 +28,6 @@ const internshipPerks = [
 ];
 
 export default function Internships() {
-  const [isFormOpen, setIsFormOpen] = useState(false);
-
   return (
     <section className="internships section-padding" id="internships" aria-label="Internship Programs">
       <div className="container">
@@ -65,26 +64,20 @@ export default function Internships() {
             </p>
           </div>
           <div className="internships__cta-action">
-            <button
-              type="button"
+            <a
+              href={INTERNSHIP_FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="internships__cta-btn"
-              onClick={() => setIsFormOpen(true)}
-              aria-label="Open Internship Application Form"
+              aria-label="Apply for Internship via Google Form"
             >
               <span>Apply for Internship</span>
               <span className="internships__btn-arrow">→</span>
-            </button>
+            </a>
             <span className="internships__cta-subtext">Limited slots available per cohort</span>
           </div>
         </div>
       </div>
-
-      {/* Google Form-Styled Internship Modal */}
-      <InternshipFormModal
-        isOpen={isFormOpen}
-        onClose={() => setIsFormOpen(false)}
-      />
     </section>
   );
 }
-

@@ -1,8 +1,9 @@
-import { useState } from 'react';
 import logoHorizontal from '../assets/images/logo-horizontal.png';
 import { quickLinks, resourceLinks, socialLinks } from '../data/homeData';
-import EnquiryModal from './EnquiryModal';
 import './Footer.css';
+
+const ENQUIRY_FORM_URL =
+  'https://docs.google.com/forms/d/e/1FAIpQLSct-wDwIiNHZiPXttWs7en_9NlOfdiDgVIFhG7it0w-lfO2BA/viewform';
 
 const SocialIcon = ({ type }) => {
   const icons = {
@@ -24,8 +25,6 @@ const SocialIcon = ({ type }) => {
 };
 
 export default function Footer() {
-  const [isEnquiryOpen, setIsEnquiryOpen] = useState(false);
-
   return (
     <footer className="footer-v2" aria-label="Site Footer">
       {/* Decorative Matrix Dots */}
@@ -137,11 +136,12 @@ export default function Footer() {
 
             {/* Send Enquiry Button */}
             <div className="footer-v2__enquiry-wrap">
-              <button
-                type="button"
+              <a
+                href={ENQUIRY_FORM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="footer-v2__enquiry-btn"
-                onClick={() => setIsEnquiryOpen(true)}
-                aria-label="Open Enquiry Form"
+                aria-label="Open Enquiry Google Form"
               >
                 <svg
                   viewBox="0 0 24 24"
@@ -159,7 +159,7 @@ export default function Footer() {
                 </svg>
                 <span>Send Enquiry</span>
                 <span className="footer-v2__enquiry-arrow">→</span>
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -181,13 +181,6 @@ export default function Footer() {
 
       {/* Solid Teal Bottom Bar */}
       <div className="footer-v2__bottom-bar" aria-hidden="true" />
-
-      {/* Google Form-Styled Enquiry Modal */}
-      <EnquiryModal
-        isOpen={isEnquiryOpen}
-        onClose={() => setIsEnquiryOpen(false)}
-      />
     </footer>
   );
 }
-
