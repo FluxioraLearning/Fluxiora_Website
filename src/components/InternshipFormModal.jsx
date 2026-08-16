@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import logoHorizontal from '../assets/images/logo-horizontal.png';
 import './InternshipFormModal.css';
 
@@ -132,7 +133,7 @@ export default function InternshipFormModal({ isOpen, onClose }) {
     setIsSubmitted(false);
   };
 
-  return (
+  return createPortal(
     <div className="gf-modal-backdrop" onClick={onClose} role="dialog" aria-modal="true" aria-label="Internship Application Form">
       <div
         className="gf-modal-container"
@@ -484,6 +485,7 @@ export default function InternshipFormModal({ isOpen, onClose }) {
           )}
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }

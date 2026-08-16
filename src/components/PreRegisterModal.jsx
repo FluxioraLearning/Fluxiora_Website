@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import logoHorizontal from '../assets/images/logo-horizontal.png';
 import './InternshipFormModal.css';
 
@@ -140,7 +141,7 @@ export default function PreRegisterModal({ isOpen, onClose }) {
     setIsSubmitted(false);
   };
 
-  return (
+  return createPortal(
     <div className="gf-modal-backdrop" onClick={onClose} role="dialog" aria-modal="true" aria-label="Upcoming Workshops Pre-Registration Form">
       <div className="gf-modal-container" onClick={(e) => e.stopPropagation()}>
         {/* Floating Top Close Bar */}
@@ -477,6 +478,7 @@ export default function PreRegisterModal({ isOpen, onClose }) {
           )}
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
