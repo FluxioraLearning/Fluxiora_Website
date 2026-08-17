@@ -167,6 +167,7 @@ export const navLinks = [
   { label: "Home", href: "#home" },
   { label: "Workshops", href: "#workshops" },
   { label: "Courses", href: "#upcoming" },
+  { label: "Our Solutions", href: "#industrial-ai" },
   { label: "Internships", href: "#internships" },
   { label: "About Us", href: "#about" },
   { label: "Contact", href: "#contact" },

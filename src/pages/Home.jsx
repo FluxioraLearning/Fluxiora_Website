@@ -4,6 +4,7 @@ import WhatWeProvide from '../components/FeatureCard';
 import VisionStrip from '../components/VisionStrip';
 import LiveWorkshops from '../components/LiveWorkshops';
 import UpcomingWorkshops from '../components/UpcomingWorkshops';
+import IndustrialAI from '../components/IndustrialAI';
 import Internships from '../components/Internships';
 import AboutUs from '../components/AboutUs';
 import ContactUs from '../components/ContactUs';
@@ -20,6 +21,7 @@ export default function Home() {
           <VisionStrip />
           <LiveWorkshops />
           <UpcomingWorkshops />
+          <IndustrialAI />
           <Internships />
           <AboutUs />
           <ContactUs />

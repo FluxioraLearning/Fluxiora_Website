@@ -1,0 +1,340 @@
+﻿/* ============================================================
+   INDUSTRIAL AI SECTION
+   Colors: website ke blue/cyan palette ke saath
+   ============================================================ */
+
+.industrial-ai {
+  background: var(--color-white);
+}
+
+/* ── Title highlight (cyan) ── */
+.iai-title-cyan {
+  color: var(--color-cyan);
+}
+
+/* ── Two-Panel Grid ── */
+.iai__panels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+  margin-bottom: var(--space-6);
+}
+
+/* ── Panel Base ── */
+.iai__panel {
+  background: #f7faff;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+/* ── Panel Header ── */
+.iai__panel-header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+.iai__panel-header--compact {
+  margin-bottom: var(--space-2);
+}
+
+/* ── Panel Icon ── */
+.iai__panel-icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iai__panel-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.iai__panel-icon--blue {
+  background: var(--color-blue-light);
+  color: var(--color-blue);
+}
+
+.iai__panel-icon--cyan {
+  background: var(--color-cyan-light);
+  color: var(--color-teal);
+}
+
+/* ── Panel Title & Subtitle ── */
+.iai__panel-title {
+  font-size: var(--fs-md);
+  font-weight: var(--fw-bold);
+  color: var(--color-deep-blue);
+  line-height: 1.3;
+  margin-bottom: var(--space-1);
+}
+
+.iai__accent {
+  color: var(--color-cyan);
+}
+
+.iai__panel-subtitle {
+  font-size: var(--fs-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.55;
+}
+
+/* ── Feature List (Left Panel) ── */
+.iai__feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.iai__feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  transition: background var(--transition-normal);
+}
+
+.iai__feature-item:hover {
+  background: var(--color-blue-light);
+}
+
+.iai__feature-icon {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-md);
+  background: var(--color-cyan-light);
+  color: var(--color-teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iai__feature-icon svg {
+  width: 17px;
+  height: 17px;
+}
+
+.iai__feature-title {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--color-deep-blue);
+  margin-bottom: 2px;
+}
+
+.iai__feature-desc {
+  font-size: var(--fs-xs);
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+/* ── Right Panel: top + workflow stacked ── */
+.iai__panel--right {
+  gap: var(--space-4);
+}
+
+.iai__right-top {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* ── Industry Grid ── */
+.iai__industry-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+}
+
+.iai__industry-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-2);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-white);
+  transition: box-shadow var(--transition-normal), border-color var(--transition-normal);
+  cursor: default;
+}
+
+.iai__industry-item:hover {
+  border-color: var(--color-cyan);
+  box-shadow: var(--shadow-md);
+}
+
+.iai__industry-icon {
+  width: 32px;
+  height: 32px;
+  color: var(--color-teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iai__industry-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.iai__industry-label {
+  font-size: 0.68rem;
+  font-weight: var(--fw-medium);
+  color: var(--color-deep-blue);
+  text-align: center;
+  white-space: pre-line;
+  line-height: 1.3;
+}
+
+/* ── Workflow Section ── */
+.iai__workflow {
+  border-top: 1.5px solid var(--color-border);
+  padding-top: var(--space-4);
+}
+
+.iai__workflow-steps {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+.iai__workflow-step-wrap {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.iai__workflow-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.iai__workflow-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background: var(--color-cyan-light);
+  color: var(--color-teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition-normal), color var(--transition-normal);
+}
+
+.iai__workflow-icon:hover {
+  background: var(--color-teal);
+  color: var(--color-white);
+}
+
+.iai__workflow-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.iai__workflow-label {
+  font-size: 0.67rem;
+  font-weight: var(--fw-medium);
+  color: var(--color-deep-blue);
+  text-align: center;
+  white-space: pre-line;
+  line-height: 1.3;
+}
+
+.iai__workflow-arrow {
+  font-size: var(--fs-md);
+  color: var(--color-cyan);
+  font-weight: var(--fw-bold);
+  margin-bottom: var(--space-5);
+  flex-shrink: 0;
+}
+
+/* ── Coming Soon Banner ── */
+.iai__coming-soon {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  background: #f0f7ff;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-5) var(--space-6);
+}
+
+.iai__cs-icon {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--color-cyan-light), var(--color-blue-light));
+  color: var(--color-teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iai__cs-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.iai__cs-title {
+  font-size: var(--fs-md);
+  font-weight: var(--fw-bold);
+  color: var(--color-deep-blue);
+  margin-bottom: var(--space-1);
+}
+
+.iai__cs-text {
+  font-size: var(--fs-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .iai__panels {
+    grid-template-columns: 1fr;
+  }
+
+  .iai__industry-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .iai__panels {
+    gap: var(--space-4);
+  }
+
+  .iai__panel {
+    padding: var(--space-4);
+  }
+
+  .iai__industry-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .iai__workflow-steps {
+    justify-content: center;
+  }
+
+  .iai__coming-soon {
+    flex-direction: column;
+    text-align: center;
+    padding: var(--space-5) var(--space-4);
+  }
+}

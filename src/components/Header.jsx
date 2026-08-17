@@ -29,6 +29,7 @@ export default function Header() {
         { id: 'contact', label: 'Contact' },
         { id: 'about', label: 'About Us' },
         { id: 'internships', label: 'Internships' },
+        { id: 'industrial-ai', label: 'Our Solutions' },
         { id: 'upcoming', label: 'Courses' },
         { id: 'workshops', label: 'Workshops' },
       ];
@@ -37,8 +38,9 @@ export default function Header() {
         const el = document.getElementById(id);
         if (el) {
           const rect = el.getBoundingClientRect();
+          const triggerPoint = window.innerHeight * 0.75;
           // Element is in the active reading range of viewport
-          if (rect.top <= 220 && rect.bottom >= 100) {
+          if (rect.top <= triggerPoint && rect.bottom >= 80) {
             setActiveLink(label);
             return;
           }
