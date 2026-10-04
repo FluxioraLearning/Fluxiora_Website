@@ -6,7 +6,7 @@ const GOOGLE_FORM_URL =
   'https://docs.google.com/forms/d/e/1FAIpQLSclD1tzkMBr6e_XE__CMYPLCiTBkrtz5o-rurlMOqURONx5_g/viewform';
 
 export default function LiveWorkshops() {
-  const pdfUrl = '/workshop_molecular_docking.pdf';
+  const pdfUrl = '/ZHSC_Workshop_Brochure.pdf';
 
   return (
     <section className="live-workshops section-padding" id="workshops" aria-label="Live Workshops">
@@ -27,11 +27,11 @@ export default function LiveWorkshops() {
               rel="noopener noreferrer"
               className="live-workshop__poster-wrap"
               title="Click to view & download workshop brochure (PDF)"
-              aria-label="View Molecular Docking Workshop Brochure PDF"
+              aria-label="View Zinc-Ion Hybrid Supercapacitor Workshop Brochure PDF"
             >
               <img
                 src={workshopPoster}
-                alt="New Horizons of Drug Discovery: Molecular Docking"
+                alt="Zinc-Ion Hybrid Supercapacitor (ZHSC) Workshop Poster"
                 className="live-workshop__poster-img"
                 loading="lazy"
               />
@@ -53,18 +53,18 @@ export default function LiveWorkshops() {
                 ● LIVE ONLINE WORKSHOP
               </span>
               <span className="live-workshop__badge live-workshop__badge--duration">
-                3 DAYS • 6 HOURS OF INSTRUCTION
+                2 DAYS • 4 HOURS OF INSTRUCTION
               </span>
             </div>
 
             {/* Title */}
             <h3 className="live-workshop__title">
-              New Horizons of Drug Discovery: <span className="live-workshop__title-accent">Molecular Docking</span>
+              Zinc-Ion Hybrid <span className="live-workshop__title-accent">Supercapacitor (ZHSC)</span>
             </h3>
 
             {/* Subtitle / Description */}
             <p className="live-workshop__description">
-              An intensive three-day online workshop to learn the principles and modern techniques of molecular docking from fundamentals to AI-powered approaches.
+              Fundamentals to Fabrication, Electrochemical Characterization and Data Interpretation. An intensive two-day online workshop with hands-on Origin software analysis.
             </p>
 
             {/* Key Event Details Grid */}
@@ -81,7 +81,7 @@ export default function LiveWorkshops() {
                 </div>
                 <div className="live-workshop__meta-text">
                   <span className="live-workshop__meta-label">Date</span>
-                  <span className="live-workshop__meta-value">6 – 8 September 2026</span>
+                  <span className="live-workshop__meta-value">17 & 18 October 2026</span>
                 </div>
               </div>
 
@@ -95,7 +95,7 @@ export default function LiveWorkshops() {
                 </div>
                 <div className="live-workshop__meta-text">
                   <span className="live-workshop__meta-label">Time</span>
-                  <span className="live-workshop__meta-value">7:00 PM – 9:00 PM (2hr per day)</span>
+                  <span className="live-workshop__meta-value">6:00 PM – 8:00 PM IST (2hr/day)</span>
                 </div>
               </div>
 
@@ -107,14 +107,13 @@ export default function LiveWorkshops() {
                 <div className="live-workshop__meta-text">
                   <span className="live-workshop__meta-label">Registration Fee</span>
                   <div className="live-workshop__price-row">
-                    <span className="live-workshop__price-cut">₹399</span>
                     <span className="live-workshop__meta-value live-workshop__meta-value--price">
-                      ₹299
+                      ₹249
                     </span>
-                    <span className="live-workshop__per-participant">/ Per Participant</span>
+                    <span className="live-workshop__per-participant">Only</span>
                   </div>
                   <span className="live-workshop__early-tag">
-                    ⚡ For early 50 participants only
+                    ⚡ Live Online Mode
                   </span>
                 </div>
               </div>
@@ -129,7 +128,7 @@ export default function LiveWorkshops() {
                 </div>
                 <div className="live-workshop__meta-text">
                   <span className="live-workshop__meta-label">Instructor</span>
-                  <span className="live-workshop__meta-value">Mr. Utkarsh Tripathi (PhD Scholar, IIT Kanpur)</span>
+                  <span className="live-workshop__meta-value">Mr. Vineet Patel (Research Scholar, IIT Madras)</span>
                 </div>
               </div>
             </div>
@@ -140,11 +139,15 @@ export default function LiveWorkshops() {
               <ul className="live-workshop__highlights-list">
                 <li>
                   <span className="live-workshop__check" aria-hidden="true">✓</span>
-                  <span>Hands-on training on AutoDock, ChimeraX, PyRx & DiffDock</span>
+                  <span>Electrode fabrication & characterization techniques (CV, GCD, EIS)</span>
                 </li>
                 <li>
                   <span className="live-workshop__check" aria-hidden="true">✓</span>
-                  <span>Official E-Certificate of Participation provided to all participants</span>
+                  <span>Data analysis and visualization using Origin software</span>
+                </li>
+                <li>
+                  <span className="live-workshop__check" aria-hidden="true">✓</span>
+                  <span>Official Certificate of Participation provided to all participants</span>
                 </li>
                 <li>
                   <span className="live-workshop__check" aria-hidden="true">✓</span>
@@ -160,10 +163,10 @@ export default function LiveWorkshops() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="live-workshop__register-btn"
-                aria-label="Open Google Form for Molecular Docking Workshop Registration"
+                aria-label="Open Google Form for Zinc-Ion Hybrid Supercapacitor Workshop Registration"
               >
                 <span>
-                  Register Now — <span className="live-workshop__btn-cut">₹399</span> ₹299
+                  Register Now — ₹249 Only
                 </span>
                 <span className="live-workshop__btn-arrow">→</span>
               </a>
@@ -172,14 +175,14 @@ export default function LiveWorkshops() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="live-workshop__brochure-btn"
-                aria-label="View Molecular Docking Workshop Brochure PDF"
+                aria-label="View Zinc-Ion Hybrid Supercapacitor Workshop Brochure PDF"
               >
                 <span aria-hidden="true">📥</span> View Brochure (PDF)
               </a>
             </div>
             <div className="live-workshop__offers-notice">
               <span className="live-workshop__early-badge-pill">
-                🏷️ Special Offer: ₹299 for early 50 participants only (Regular ₹399)
+                🏷️ Registration Fee: ₹249 Only (Comprehensive 2-Day Live Training)
               </span>
               <span className="live-workshop__seats-notice">
                 🔥 Limited seats available for live interactions!
